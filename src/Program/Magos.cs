@@ -75,9 +75,14 @@ public class Mago : IPersonaje
         }
     }
 
-    public void conocerAtaque()
+    public void conocerPersonaje()
     {
-        Console.WriteLine($"Los puntos de ataque de {this.Nombre} {this.Puntos_de_ataque}"); 
+        Console.WriteLine($"Los puntos de ataque de {this.Nombre} son {this.Puntos_de_ataque}, los de defensa {this.Puntos_de_defensa} y sus puntos de salud {this.Puntos_de_salud}"); 
+    }
+    
+    public void addLibroHechizos()
+    {
+        Puntos_de_defensa += Hechizo.libroDeHechizos.
     }
 }   
 
