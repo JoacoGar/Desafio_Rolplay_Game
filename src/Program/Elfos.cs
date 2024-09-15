@@ -1,24 +1,22 @@
 namespace Program;
 
-public class Mago : IPersonaje
+public class Elfos
 {
     public string Nombre { get; set; }
     public int Puntos_de_salud { get; set; }
     public int Puntos_de_ataque { get; set; }   
     public int Puntos_de_defensa { get; set; }
-    public List<IElementos> ArmasMago { get; set; }
-    public List <IElementos> ArmaduraMago { get; set; }
-    public List <IElementos> Libro_de_hechizos { get; set; }
+    public List<IElementos> ArmasElfos { get; set; }
+    public List <IElementos> ArmaduraElfos { get; set; }
     
-    public Mago(string nombre)
+    public Elfos(string nombre)
     {
         Nombre = nombre;
         Puntos_de_salud = 100;
         Puntos_de_ataque = 0;                                   // Declaro unos puntos de ataque y de defensa iniciales en 0, dado que los mismos seran otorgados por los distintos elementos.
         Puntos_de_defensa = 0;
-        ArmasMago = new List<IElementos>();
-        ArmaduraMago = new List<IElementos>();
-        Libro_de_hechizos = new List<IElementos>();
+        ArmasElfos = new List<IElementos>();
+        ArmaduraElfos = new List<IElementos>();
     } 
     public void Atacar(IPersonaje personajeQueAtaca, IPersonaje personajeAtacado)
     {
@@ -44,13 +42,13 @@ public class Mago : IPersonaje
     {
         if (Armas.listaArmas.Contains(elemento))
         {
-            ArmasMago.Add(elemento);
+            ArmasElfos.Add(elemento);
             Puntos_de_ataque += elemento.Poder_de_ataque;
             Console.WriteLine($"{this.Nombre} a recibido {elemento}");
         }
         else if (Armaduras.listaArmaduras.Contains(elemento))
         {
-            ArmaduraMago.Add(elemento);
+            ArmaduraElfos.Add(elemento);
             Puntos_de_defensa += elemento.Poder_de_defensa;
             Console.WriteLine($"{this.Nombre} a recibido {elemento}");
 
@@ -59,16 +57,16 @@ public class Mago : IPersonaje
     
     public void removeElemento(IElementos elemento)
     {
-        if (ArmasMago.Contains(elemento))
+        if (ArmasElfos.Contains(elemento))
         {
-            ArmasMago.Remove(elemento);
+            ArmasElfos.Remove(elemento);
             Puntos_de_ataque -= elemento.Poder_de_ataque;
             Console.WriteLine($"A {this.Nombre} se le a quitado {elemento}");
 
         }
-        else if (ArmaduraMago.Contains(elemento))
+        else if (ArmaduraElfos.Contains(elemento))
         {
-            ArmaduraMago.Remove(elemento);
+            ArmaduraElfos.Remove(elemento);
             Puntos_de_defensa -= elemento.Poder_de_defensa;
             Console.WriteLine($"A {this.Nombre} se le a quitado {elemento}");
 
@@ -79,5 +77,4 @@ public class Mago : IPersonaje
     {
         Console.WriteLine($"Los puntos de ataque de {this.Nombre} {this.Puntos_de_ataque}"); 
     }
-}   
-
+}
