@@ -1,6 +1,6 @@
 namespace Program;
 
-public class Mago
+public class Mago : IPersonaje
 {
     public string Nombre { get; set; }
     public int Puntos_de_salud { get; set; }
@@ -9,7 +9,16 @@ public class Mago
     public List<Armas> Arma { get; set; }
     public List <Armaduras> Armadura { get; set; }
     public List <Hechizos> Libro_de_hechizos { get; set; }
-    
+    public void Atacar()
+    {
+       
+    }
+
+    public void Curar()
+    {
+
+    }
+
     public Mago(string nombre, int salud)
     {
         Nombre = nombre;
