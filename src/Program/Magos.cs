@@ -8,6 +8,7 @@ public class Mago
     public int Puntos_de_defensa { get; set; }
     public List<Armas> Arma { get; set; }
     public List <Armaduras> Armadura { get; set; }
+    public List <Hechizos> Libro_de_hechizos { get; set; }
     
     public Mago(string nombre, int salud)
     {
@@ -17,6 +18,7 @@ public class Mago
         Puntos_de_defensa = 0;
         Arma = new List<Armas>();
         Armadura = new List<Armaduras>();
+        Libro_de_hechizos = new List<Hechizos>();
     } 
 }   
 
