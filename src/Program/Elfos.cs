@@ -32,7 +32,7 @@ public class Elfos :IPersonaje
     public void Curar(IPersonaje personaje)
     {
         personaje.Puntos_de_salud = 100;
-        Console.WriteLine($"{this.Nombre} se a curado");
+        Console.WriteLine($"{this.Nombre} se a curado, su nuevo punto de salud es 100");
 
     }
     
