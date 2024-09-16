@@ -2,7 +2,6 @@ namespace Program;
 
 public class Hechizo: IElementos
 { 
-    public static List<IElementos> libroDeHechizos { get; set; }
     public string Nombre_elemento { get; set;  }
     public int Poder_de_ataque { get; set;  }
     public int Poder_de_defensa { get; set;  }
@@ -12,6 +11,6 @@ public class Hechizo: IElementos
         Nombre_elemento = nombre;
         Poder_de_ataque = poderDeAtaque;
         Poder_de_defensa = poderDeDefensa; 
-        libroDeHechizos.Add(this);
     }
+    
 }

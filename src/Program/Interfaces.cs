@@ -8,7 +8,6 @@
     void addElemento(IElementos elemento);
     void removeElemento(IElementos elemento);
     void conocerPersonaje();
-    void addLibroHechizos();
 }
 
 public interface IElementos {

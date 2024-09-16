@@ -1,6 +1,6 @@
 namespace Program;
 
-public class Elfos
+public class Elfos :IPersonaje
 {
     public string Nombre { get; set; }
     public int Puntos_de_salud { get; set; }
