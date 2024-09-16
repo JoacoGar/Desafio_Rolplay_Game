@@ -1,5 +1,3 @@
-namespace Program;
-
 public class Enanos : IPersonaje
 {
       public string Nombre { get; set; }
@@ -74,7 +72,7 @@ public class Enanos : IPersonaje
     }
 
     public void conocerPersonaje()
-    {
+    { 
         Console.WriteLine($"Los puntos de ataque de {this.Nombre} son {this.Puntos_de_ataque}, los de defensa {this.Puntos_de_defensa} y sus puntos de salud {this.Puntos_de_salud}"); 
     }
 }

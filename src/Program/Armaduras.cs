@@ -1,9 +1,7 @@
-namespace Program;
-
 public class Armaduras : IElementos
 {
-    
-    public static List<IElementos> listaArmaduras { get; set; }
+
+    public static List<IElementos> listaArmaduras { get; set; } = new List<IElementos>();
     public string Nombre_elemento { get; set;  }
     public int Poder_de_ataque { get; set;  }
     public int Poder_de_defensa { get; set;  }

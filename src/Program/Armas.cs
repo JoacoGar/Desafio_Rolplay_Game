@@ -1,8 +1,7 @@
-using System.Runtime.CompilerServices;
-namespace Program;
+
 public class Armas : IElementos
 {
-    public static List<IElementos> listaArmas { get; set; }
+    public static List<IElementos> listaArmas { get; set; } = new List<IElementos>();
     public string Nombre_elemento { get; set;  }
     public int Poder_de_ataque { get; set;  }
     public int Poder_de_defensa { get; set;  }

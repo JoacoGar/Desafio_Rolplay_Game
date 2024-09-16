@@ -1,5 +1,3 @@
-namespace Program;
-
 public class Hechizo: IElementos
 { 
     public string Nombre_elemento { get; set;  }

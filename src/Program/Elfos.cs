@@ -1,5 +1,3 @@
-namespace Program;
-
 public class Elfos :IPersonaje
 {
     public string Nombre { get; set; }

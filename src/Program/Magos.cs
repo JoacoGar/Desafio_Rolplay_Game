@@ -1,5 +1,3 @@
-namespace Program;
-
 public class Mago : IPersonaje
 {
     public string Nombre { get; set; }
