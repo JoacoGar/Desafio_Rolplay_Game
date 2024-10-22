@@ -53,13 +53,18 @@ public class Encuentro
     {
         int contador = 0;
 
-        foreach (var enemigos in Malos.ToList())
+        foreach (var enemigo in Malos.ToList())
         {
+            if (Heroes.Count == 0)
+            {
+                break;
+            }
+
             Heroes hero = Heroes[contador];
-            int restarVida = enemigos.Puntos_de_ataque;
+            int restarVida = enemigo.Puntos_de_ataque;
             hero.Puntos_de_salud -= restarVida;
 
-            Console.WriteLine($"{enemigos.Nombre} atacó a {hero.Nombre}, restandole {restarVida} puntos de vida.");
+            Console.WriteLine($"{enemigo.Nombre} atacó a {hero.Nombre}, restándole {restarVida} puntos de vida.");
 
             if (hero.Puntos_de_salud <= 0)
             {
@@ -67,7 +72,10 @@ public class Encuentro
                 Heroes.Remove(hero);
             }
 
-            contador = (contador + 1) % Heroes.Count;
+            if (Heroes.Count > 0)
+            {
+                contador = (contador + 1) % Heroes.Count; 
+            }
         }
     }
 
@@ -91,7 +99,9 @@ public class Encuentro
 
                 if (hero.VP >= 5)
                 {
-                    CurarHeroe(hero);
+                    hero.Puntos_de_salud = 100;
+                    hero.VP = 0;
+                    Console.WriteLine($"El héroe {hero.VP} ha recargado su vida al 100.");
                 }
 
                 if (Malos.Count == 0)
@@ -105,12 +115,6 @@ public class Encuentro
     }
 
 
-    public void CurarHeroe(Heroes hero)
-        {
-            hero.Puntos_de_salud = 100;
-            hero.VP = 0;
-            Console.WriteLine($"El héroe {hero.Nombre} se ha curado.");
-        }
     
 }
 
