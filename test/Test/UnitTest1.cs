@@ -22,7 +22,7 @@ namespace Test
         [Test]
         public void TestAtaqueyDefensa()
         {
-            var nombre = "Espada con escudo";
+            var nombre = "Espada y escudo";
             var ataque = 40;
             var defensa = 20;
             
@@ -37,7 +37,7 @@ namespace Test
         public void TestDefensa()
         {
             
-            var nombre = "Escudo";
+            var nombre = "casco";
             var escudo = 30;
 
             
@@ -52,7 +52,7 @@ namespace Test
         public void TestHeroes()
         {
             
-            var nombre = "Héroe";
+            var nombre = "Heroe";
             
             var heroe = new Heroes(nombre);
             
@@ -64,7 +64,7 @@ namespace Test
         [Test]
         public void TestHeroesPV()
         {
-            var heroe = new Heroes("Héroe");
+            var heroe = new Heroes("Heroe");
             
             heroe.GanarVP(3);
             
@@ -74,7 +74,7 @@ namespace Test
         [Test]
         public void TestMalos()
         {
-            var nombre = "Villano";
+            var nombre = "Maleante";
             var vp = 5;
             
             var malo = new Malos(nombre, vp);
