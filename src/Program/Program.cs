@@ -13,7 +13,8 @@ public class Program
 
 
             Encuentro encuentro = new Encuentro(new List<Heroes> { hero }, new List<Malos> { enemy, enem });
-            hero.Puntos_de_ataque = 150; 
+            hero.Puntos_de_ataque = 150;
+            enem.Puntos_de_ataque = 200;
 
             encuentro.DoEncounter();
         }
